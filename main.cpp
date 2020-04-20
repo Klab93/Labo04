@@ -12,6 +12,7 @@ int main() {
 
    // Salut à tous !!
    // salut ^^
+   // test233456
 	{
 		cout << "------------------------------------------------------------" << endl;
 		cout << "Test sur Collection<char, vector> :" << endl;
