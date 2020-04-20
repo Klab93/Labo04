@@ -11,8 +11,7 @@ using namespace std;
 int main() {
 
    // Salut à tous !!
-   // salut ^^
-   // test23
+
 	{
 		cout << "------------------------------------------------------------" << endl;
 		cout << "Test sur Collection<char, vector> :" << endl;
