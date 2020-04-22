@@ -35,6 +35,10 @@ class Collection {
       size_t taille();
       bool contient(const T& element);
       void vider();
+
+      template <typename unaryFunct>
+		void parcourir(unaryFunct);
+
    private :
       Conteneur<T> collection;
 };
