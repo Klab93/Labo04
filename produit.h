@@ -16,11 +16,17 @@
 #define PRODUIT_H
 
 #include <string>
+#include <iostream>
 
 class Produit{
+
+   friend std::ostream& operator <<(std::ostream& os, const Produit& p);
+
 public:
 
    Produit(int no, const std::string& libelle, double prix);
+
+   void setPrix(double prix);
 
 private:
    int no;

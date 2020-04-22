@@ -19,3 +19,12 @@ using namespace std;
 
 Produit::Produit(int no, const string& libelle, double prix)
    :no(no), libelle(libelle), prix(prix) {}
+
+ostream &operator<<(ostream &os, const Produit &p) {
+   os << '(' << p.no << ", " << p.libelle << ", " << p.prix << ')';
+   return os;
+}
+
+void Produit::setPrix(double _prix) {
+   prix = _prix;
+}
