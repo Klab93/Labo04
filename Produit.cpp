@@ -14,6 +14,7 @@
 */
 #include "produit.h"
 #include "exceptions.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -24,7 +25,8 @@ Produit::Produit(int no, const string& libelle, double prix)
 }
 
 ostream &operator<<(ostream &os, const Produit &p) {
-   os << '(' << p.no << ", \"" << p.libelle << "\", " << p.prix << ')';
+   os << '(' << p.no << ", \"" << p.libelle << "\", "
+   << fixed << setprecision(2) << p.prix << ')';
    return os;
 }
 
@@ -34,6 +36,12 @@ void Produit::setPrix(double _prix) {
    prix = _prix;
 }
 
+double Produit::getPrix() const {
+   return prix;
+}
+
 bool operator==(const Produit &lhs, const Produit &rhs) {
    return lhs.prix == rhs.prix and lhs.libelle == rhs.libelle and lhs.no == rhs.no ;
 }
+
+
