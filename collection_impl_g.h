@@ -17,8 +17,7 @@
 #include "collection_g.h"
 #include "exceptions.h"
 #include <string>
-template <typename T, template <typename,typename> class Conteneur>
-Collection<T, Conteneur>::Collection() {}
+
 
 
 template <typename T, template <typename,typename> class Conteneur>

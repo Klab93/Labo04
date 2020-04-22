@@ -29,7 +29,7 @@ class Collection {
    friend std::ostream& operator<< <T,Conteneur>(std::ostream& lhs, 
                            const Collection<T,Conteneur>& rhs);
    public :
-      Collection();
+      Collection() = default;
       void ajouter(T element);
       T& get(size_t indice);
       size_t taille();
