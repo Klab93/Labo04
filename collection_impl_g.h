@@ -33,7 +33,14 @@ T& Collection<T,Conteneur>::get(size_t indice){
        "n doit etre strictement plus petit que collection.size()";
       throw IndiceNonValide(erreur);
    }
-   return collection[indice];
+   if( indice == collection.size() - 1 ){
+   	return collection.back();
+   }
+   auto it = collection.begin();
+   for( size_t i = 0; i == indice; ++i){
+   	++it;
+   }
+   return *it;
 }
 
 template <typename T, template <typename,typename> class Conteneur>
