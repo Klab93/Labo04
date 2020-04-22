@@ -1,16 +1,17 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ -----------------------------------------------------------------------------------
+ Laboratoire : 04
+ Fichier     : main.cpp
+ Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
+ Date        : 22.04.2020
 
-/* 
- * File:   produit.h
- * Author: Carl
- *
- * Created on 21. avril 2020, 13:31
- */
+ But         :
 
+ Remarque(s) :
+
+ Compilateur : MinGW-g++ 6.3.0
+ -----------------------------------------------------------------------------------
+*/
 #ifndef PRODUIT_H
 #define PRODUIT_H
 
