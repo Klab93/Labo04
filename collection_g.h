@@ -37,8 +37,6 @@ class Collection {
       void vider();
    private :
       Conteneur<T> collection;
-      size_t taille_;
-         
 };
 
     

@@ -37,7 +37,7 @@ T& Collection<T,Conteneur>::get(size_t indice){
    	return collection.back();
    }
    auto it = collection.begin();
-   for( size_t i = 0; i == indice; ++i){
+   for( size_t i = 0; i < indice; ++i){
    	++it;
    }
    return *it;
