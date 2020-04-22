@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/01_heig/01_INF/Labo/Labo04
+# Install script for directory: D:/Documents/01_heig/Inf-1/Labo04
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Documents/01_heig/01_INF/Labo/Labo04/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Documents/01_heig/Inf-1/Labo04/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -47,10 +47,10 @@ RM = C:\Users\kylia\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Documents\01_heig\01_INF\Labo\Labo04
+CMAKE_SOURCE_DIR = D:\Documents\01_heig\Inf-1\Labo04
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Documents\01_heig\01_INF\Labo\Labo04\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Documents\01_heig\Inf-1\Labo04\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\01_heig\01_INF\Labo\Labo04\cmake-build-debug\CMakeFiles D:\Documents\01_heig\01_INF\Labo\Labo04\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\01_heig\Inf-1\Labo04\cmake-build-debug\CMakeFiles D:\Documents\01_heig\Inf-1\Labo04\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\01_heig\01_INF\Labo\Labo04\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\01_heig\Inf-1\Labo04\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Labo04/fast:
 	$(MAKE) -f CMakeFiles\Labo04.dir\build.make CMakeFiles/Labo04.dir/build
 .PHONY : Labo04/fast
 
+Produit.obj: Produit.cpp.obj
+
+.PHONY : Produit.obj
+
+# target to build an object file
+Produit.cpp.obj:
+	$(MAKE) -f CMakeFiles\Labo04.dir\build.make CMakeFiles/Labo04.dir/Produit.cpp.obj
+.PHONY : Produit.cpp.obj
+
+Produit.i: Produit.cpp.i
+
+.PHONY : Produit.i
+
+# target to preprocess a source file
+Produit.cpp.i:
+	$(MAKE) -f CMakeFiles\Labo04.dir\build.make CMakeFiles/Labo04.dir/Produit.cpp.i
+.PHONY : Produit.cpp.i
+
+Produit.s: Produit.cpp.s
+
+.PHONY : Produit.s
+
+# target to generate assembly for a file
+Produit.cpp.s:
+	$(MAKE) -f CMakeFiles\Labo04.dir\build.make CMakeFiles/Labo04.dir/Produit.cpp.s
+.PHONY : Produit.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Labo04
 	@echo ... edit_cache
+	@echo ... Produit.obj
+	@echo ... Produit.i
+	@echo ... Produit.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

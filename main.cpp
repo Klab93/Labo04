@@ -91,13 +91,13 @@ int main() {
 				  << c.contient(p2) << endl
 				  << noboolalpha;
 			{
-				//< à compléter 1 >
+
 				auto majore = [](Produit& p){
 					p.setPrix( p.getPrix() * 1.1 );
 				};
 			  // On parcourt la collection en majorant le prix de chacun
 			  // des produits de 10%
-			  c.parcourir( majore );
+			   c.parcourir( majore );
 				cout << c << " (taille = " << c.taille() << ")" << endl;
 			}
 			c.vider();

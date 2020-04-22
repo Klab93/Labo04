@@ -80,6 +80,7 @@ std::ostream& operator<< (std::ostream& lhs,
 template <typename T, template <typename,typename> class Conteneur>
 template <typename UnaryFunct>
 void Collection<T, Conteneur>::parcourir(UnaryFunct fn){
+	if( collection.empty() ) return;
 	for(auto it = collection.begin(); it != collection.end(); ++it){
 		fn(*it);
 	}
