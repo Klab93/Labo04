@@ -15,7 +15,17 @@
 #ifndef PRODUIT_H
 #define PRODUIT_H
 
+#include <string>
 
+class Produit{
+public:
+
+   Produit(int no, const std::string& libelle, double prix);
+
+private:
+   int no;
+   std::string libelle;
+   double prix;
+};
 
 #endif /* PRODUIT_H */
-
