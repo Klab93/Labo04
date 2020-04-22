@@ -28,6 +28,7 @@ public:
    Produit(int no, const std::string& libelle, double prix);
 
    void setPrix(double prix);
+   double getPrix() const;
 
 private:
    int no;
