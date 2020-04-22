@@ -13,19 +13,24 @@
  -----------------------------------------------------------------------------------
 */
 #include "produit.h"
-
+#include "exceptions.h"
 
 using namespace std;
 
 Produit::Produit(int no, const string& libelle, double prix)
-   :no(no), libelle(libelle), prix(prix) {}
+   :no(no), libelle(libelle), prix(prix) {
+   if(prix < 0.05) throw(PrixNonValide("Erreur dans Produit::Produit :\n"
+                                        "le prix doit etre >= 5 cts !"));
+}
 
 ostream &operator<<(ostream &os, const Produit &p) {
-   os << '(' << p.no << ", " << p.libelle << ", " << p.prix << ')';
+   os << '(' << p.no << ", \"" << p.libelle << "\", " << p.prix << ')';
    return os;
 }
 
 void Produit::setPrix(double _prix) {
+   if(_prix < 0.05) throw(PrixNonValide("Erreur dans Produit::Produit :\n"
+                                     "le prix doit etre >= 5 cts !"));
    prix = _prix;
 }
 
