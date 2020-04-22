@@ -21,6 +21,7 @@
 class Produit{
 
    friend std::ostream& operator <<(std::ostream& os, const Produit& p);
+   friend bool operator ==(const Produit& lhs, const Produit& rhs);
 
 public:
 

@@ -28,3 +28,7 @@ ostream &operator<<(ostream &os, const Produit &p) {
 void Produit::setPrix(double _prix) {
    prix = _prix;
 }
+
+bool operator==(const Produit &lhs, const Produit &rhs) {
+   return lhs.prix == rhs.prix and lhs.libelle == rhs.libelle and lhs.no == rhs.no ;
+}
