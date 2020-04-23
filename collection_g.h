@@ -15,7 +15,7 @@
 #ifndef COLLECTION_G_H
 #define COLLECTION_G_H
 #include <iostream>
-#include <memory>
+
 template <typename T, template <typename,typename = std::allocator<T>> class Conteneur>
 class Collection;
 
@@ -32,8 +32,8 @@ class Collection {
       Collection() = default;
       void ajouter(T element);
       T& get(size_t indice);
-      size_t taille();
-      bool contient(const T& element);
+      size_t taille() const;
+      bool contient(const T& element) const;
       void vider();
 
       template <typename unaryFunct>

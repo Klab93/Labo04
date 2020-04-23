@@ -36,19 +36,18 @@ T& Collection<T,Conteneur>::get(size_t indice){
    	return collection.back();
    }
    auto it = collection.begin();
-   for( size_t i = 0; i < indice; ++i){
-   	++it;
-   }
+   std::advance(it, indice);
+   
    return *it;
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-size_t Collection<T, Conteneur>::taille(){
+size_t Collection<T, Conteneur>::taille() const{
    return collection.size();
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-bool Collection<T, Conteneur>::contient(const T& element){
+bool Collection<T, Conteneur>::contient(const T& element) const {
    for(auto i = collection.begin(); i != collection.end(); ++i){
       if(*i == element){
          return true;
@@ -59,7 +58,7 @@ bool Collection<T, Conteneur>::contient(const T& element){
 
 template <typename T, template <typename,typename> class Conteneur>
 void Collection<T, Conteneur>::vider(){
-   collection.erase(collection.begin(),collection.end());
+   collection.clear();
 }
 template <typename T, template <typename,typename> class Conteneur>
 std::ostream& operator<< (std::ostream& lhs, 
