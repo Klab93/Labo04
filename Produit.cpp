@@ -31,7 +31,7 @@ ostream &operator<<(ostream &os, const Produit &p) {
 }
 
 void Produit::setPrix(double _prix) {
-   if(_prix < 0.05) throw(PrixNonValide("Erreur dans Produit::Produit :\n"
+   if(_prix < 0.05) throw(PrixNonValide("Erreur dans Produit::setPrix :\n"
                                      "le prix doit etre >= 5 cts !"));
    prix = _prix;
 }
