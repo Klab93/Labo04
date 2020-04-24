@@ -9,6 +9,7 @@
                collection et permettant d'effectuer diverses manipulation sur
                celle-ci.
                La classe fourni les outils suivants :
+               - Une surcharge de l'opérateur << permettant d'afficher une collection
                - Un constructeur par défaut.
                - Une méthode void ajouter(T element) permettant d'ajouter un élément
                  à la collection.
@@ -38,23 +39,23 @@
 #include <iostream>
 #include <memory>
 template <typename T, template <typename, typename = std::allocator<T>>
-          class Conteneur>
+class Conteneur>
 class Collection;
 
 // Surcharge de l'opérateur de flux permettant d'afficher une collection
 template <typename T, template <typename, typename = std::allocator<T>>
-          class Conteneur>
+class Conteneur>
 std::ostream& operator<<(std::ostream& lhs,
         const Collection<T, Conteneur>& rhs);
 
 template <typename T, template <typename, typename = std::allocator<T>>
-         class Conteneur>
+class Conteneur>
 class Collection {
-	// Déclaration d'amitié de l'opérateur de flux
+   // Déclaration d'amitié de l'opérateur de flux
    friend std::ostream& operator<< <T, Conteneur>(std::ostream& lhs,
            const Collection<T, Conteneur>& rhs);
 public:
-	// Constructeur par défaut
+   // Constructeur par défaut
    Collection() = default;
 
    // Ajoute à la fin de la collection un nouvel élément
@@ -75,15 +76,15 @@ public:
    // garantie no-throw
    bool contient(const T& element) const;
 
-	// vide complétement la collection
-	// garantie no-throw
-	void vider() noexcept;
+   // vide complétement la collection
+   // garantie no-throw
+   void vider() noexcept;
 
-	// parcoure un conteneur et applique une foncion unaire à chaque élément
-	// Elle prend en paramètre une fonction unaire
-	// Garantie no-throw
-	template <typename unaryFunct>
-	void parcourir(unaryFunct);
+   // parcoure un conteneur et applique une foncion unaire à chaque élément
+   // Elle prend en paramètre une fonction unaire
+   // Garantie no-throw
+   template <typename unaryFunct>
+   void parcourir(unaryFunct);
 
 private:
    Conteneur<T> collection;
