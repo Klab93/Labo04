@@ -1,13 +1,13 @@
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : 04
- Fichier     : main.cpp
+ Fichier     : exception.h
  Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
  Date        : 22.04.2020
 
- But         :
+ But         : exceptions utiles pour les classes Produit et Collection
 
- Remarque(s) :
+ Remarque(s) : héritent de std::logic_error
 
  Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
