@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Laboratoire : 04
  Fichier     : Produit.cpp
- Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
+ Auteur(s)   : Kylian Bourcoud, Anne Sophie Ganguillet, Carl Penalva
  Date        : 22.04.2020
 
  But         : implémentation de la classe produit
