@@ -21,11 +21,11 @@
                - Une méthode void parcourir(unaryFunc) permettant de parcourir 
                  la collection en appliquant unaryFunc à chacun de ses éléments.
 
- Remarque(s) : La classe ne peut être utilisées qu'avec des conteneurs 
+ Remarque(s) : La classe ne peut être utilisée qu'avec des conteneurs
                mettant à disposition les méthodes push_back(), size(), back(), 
                clear(), empty(), begin() et end().
                La méthode get() lève une exception du type IndiceNonValide si
-               l'indice passé en paramètre et supérieur ou égal à la taille 
+               l'indice passé en paramètre est supérieur ou égal à la taille
                de la collection.
                La méthode ajouter() peut lever les exceptions de push_back(). 
   
