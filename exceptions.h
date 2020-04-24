@@ -1,8 +1,8 @@
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : 04
- Fichier     : exception.h
- Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
+ Fichier     : exceptions.h
+ Auteur(s)   : Kylian Bourcoud, Anne Sophie Ganguillet, Carl Penalva
  Date        : 22.04.2020
 
  But         : exceptions utiles pour les classes Produit et Collection
