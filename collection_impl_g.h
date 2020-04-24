@@ -5,9 +5,8 @@
  Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
  Date        : 22.04.2020
 
- But         :
-
- Remarque(s) :
+ But         : Implémenter les fonctionalités de la classe Collection
+ 
 
  Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
@@ -17,7 +16,7 @@
 #include "collection_g.h"
 #include "exceptions.h"
 #include <string>
-
+#include <iterator>
 
 
 template <typename T, template <typename,typename> class Conteneur>
@@ -28,9 +27,9 @@ void Collection<T, Conteneur>::ajouter(T element){
 template <typename T, template <typename,typename> class Conteneur>
 T& Collection<T,Conteneur>::get(size_t indice){
    if(indice >= collection.size()){
-      std::string erreur = "Erreur dans Collection::get :\n"
-       "n doit etre strictement plus petit que collection.size()";
-      throw IndiceNonValide(erreur);
+      
+      throw IndiceNonValide("Erreur dans Collection::get :\n"
+       "n doit etre strictement plus petit que collection.size()");
    }
    if( indice == collection.size() - 1 ){
    	return collection.back();
@@ -42,7 +41,7 @@ T& Collection<T,Conteneur>::get(size_t indice){
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-size_t Collection<T, Conteneur>::taille() const{
+size_t Collection<T, Conteneur>::taille() const noexcept{
    return collection.size();
 }
 
@@ -57,7 +56,7 @@ bool Collection<T, Conteneur>::contient(const T& element) const {
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-void Collection<T, Conteneur>::vider(){
+void Collection<T, Conteneur>::vider() noexcept {
    collection.clear();
 }
 template <typename T, template <typename,typename> class Conteneur>
