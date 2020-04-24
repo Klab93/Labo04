@@ -41,6 +41,7 @@ template <typename T, template <typename, typename = std::allocator<T>>
           class Conteneur>
 class Collection;
 
+// Surcharge de l'opérateur de flux permettant d'afficher une collection
 template <typename T, template <typename, typename = std::allocator<T>>
           class Conteneur>
 std::ostream& operator<<(std::ostream& lhs,
@@ -49,24 +50,40 @@ std::ostream& operator<<(std::ostream& lhs,
 template <typename T, template <typename, typename = std::allocator<T>>
          class Conteneur>
 class Collection {
+	// Déclaration d'amitié de l'opérateur de flux
    friend std::ostream& operator<< <T, Conteneur>(std::ostream& lhs,
            const Collection<T, Conteneur>& rhs);
 public:
+	// Constructeur par défaut
    Collection() = default;
+
+   // Ajoute à la fin de la collection un nouvel élément
+   // Garantie forte car utilisation de push_back()
    void ajouter(T element);
+
+   // Retourne l'élément à l'indice de la collection
+   // Exception indice non-valide si indice >= taille
+   // L'exception prends en compte une collection vide
    T& get(size_t indice);
+
+   // Retourne la taille de la collection
+   // Garantie no-throw
    size_t taille() const noexcept;
+
+   // Vérifie si un élement est dans un un conteneur
+   // Renvoie true si il y'est
+   // garantie
    bool contient(const T& element) const;
 
-      // vide complétement la collection
-      // garantie no-throw
-      void vider() noexcept;
+	// vide complétement la collection
+	// garantie no-throw
+	void vider() noexcept;
 
-      // parcoure un conteneur et applique une foncion unaire à chaque élément
-      // Elle prend en paramètre une fonction unaire
-      // Garantie
-      template <typename unaryFunct>
-		void parcourir(unaryFunct);
+	// parcoure un conteneur et applique une foncion unaire à chaque élément
+	// Elle prend en paramètre une fonction unaire
+	// Garantie
+	template <typename unaryFunct>
+	void parcourir(unaryFunct);
 
 private:
    Conteneur<T> collection;
