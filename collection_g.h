@@ -72,7 +72,7 @@ public:
 
    // Vérifie si un élement est dans un un conteneur
    // Renvoie true si il y'est
-   // garantie
+   // garantie no-throw
    bool contient(const T& element) const;
 
 	// vide complétement la collection
@@ -81,7 +81,7 @@ public:
 
 	// parcoure un conteneur et applique une foncion unaire à chaque élément
 	// Elle prend en paramètre une fonction unaire
-	// Garantie
+	// Garantie no-throw
 	template <typename unaryFunct>
 	void parcourir(unaryFunct);
 
