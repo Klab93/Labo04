@@ -18,12 +18,15 @@
 
 using namespace std;
 
-const std::string MSG_ERREUR = "Erreur dans Produit::Produit :\n"
+const std::string MSG_ERREUR_PRODUIT = "Erreur dans Produit::Produit :\n"
                           "le prix doit etre >= 5 cts !";
+const std::string MSG_ERREUR_SET = "Erreur dans Produit::setPrix :\n"
+                               "le prix doit etre >= 5 cts !";
+
 
 Produit::Produit(int no, const string& libelle, double prix)
    :no(no), libelle(libelle), prix(prix) {
-   if(prix < 0.05) throw(PrixNonValide(MSG_ERREUR));
+   if(prix < 0.05) throw(PrixNonValide(MSG_ERREUR_PRODUIT));
 }
 
 ostream &operator<<(ostream &os, const Produit &p) {
@@ -33,11 +36,11 @@ ostream &operator<<(ostream &os, const Produit &p) {
 }
 
 void Produit::setPrix(double _prix) {
-   if(_prix < 0.05) throw(PrixNonValide(MSG_ERREUR));
+   if(_prix < 0.05) throw(PrixNonValide(MSG_ERREUR_SET));
    prix = _prix;
 }
 
-double Produit::getPrix() const {
+double Produit::getPrix() const noexcept{
    return prix;
 }
 
