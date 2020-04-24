@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Laboratoire : 04
  Fichier     : produit.h
- Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
+ Auteur(s)   : Kylian Bourcoud, Anne Sophie Ganguillet, Carl Penalva
  Date        : 22.04.2020
 
  But         : classe qui représente des produits, représentés par un numéro, un

@@ -2,11 +2,11 @@
  -----------------------------------------------------------------------------------
  Laboratoire : 04
  Fichier     : collection_impl_g.h
- Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
+ Auteur(s)   : Kylian Bourcoud, Anne Sophie Ganguillet, Carl Penalva
  Date        : 22.04.2020
 
  But         : Implémenter les fonctionalités de la classe Collection
-
+ 
  Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
 */
@@ -17,6 +17,8 @@
 #include <string>
 #include <iterator>
 
+const std::string MSG_ERREUR = "Erreur dans Collection::get :\n"
+       "n doit etre strictement plus petit que collection.size()";
 
 template <typename T, template <typename,typename> class Conteneur>
 void Collection<T, Conteneur>::ajouter(T element){
@@ -26,9 +28,8 @@ void Collection<T, Conteneur>::ajouter(T element){
 template <typename T, template <typename,typename> class Conteneur>
 T& Collection<T,Conteneur>::get(size_t indice){
    if(indice >= collection.size()){
-
-      throw IndiceNonValide("Erreur dans Collection::get :\n"
-       "n doit etre strictement plus petit que collection.size()");
+      
+      throw IndiceNonValide(MSG_ERREUR);
    }
    if( indice == collection.size() - 1 ){
    	return collection.back();
@@ -56,7 +57,7 @@ bool Collection<T, Conteneur>::contient(const T& element) const {
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-void Collection<T, Conteneur>::vider() noexcept{
+void Collection<T, Conteneur>::vider() noexcept {
    collection.clear();
 }
 template <typename T, template <typename,typename> class Conteneur>
