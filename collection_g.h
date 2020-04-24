@@ -1,12 +1,12 @@
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : 04
- Fichier     : main.cpp
+ Fichier     : collection_g.h
  Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
  Date        : 22.04.2020
 
  But         : Mettre à disposition une classe Collection générique modélisant une 
-               collection et permettant de d'effectuer diverses manipulation sur
+               collection et permettant d'effectuer diverses manipulation sur
                celle-ci.
                La classe fourni les outils suivants :
                - Un constructeur par défaut.
