@@ -1,7 +1,7 @@
 /*
  -----------------------------------------------------------------------------------
  Laboratoire : 04
- Fichier     : produit.cpp
+ Fichier     : produit.h
  Auteur(s)   : Anne Sophie Ganguillet, Kylian Bourcoud, Carl Penalva
  Date        : 22.04.2020
 
