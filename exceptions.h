@@ -20,11 +20,15 @@ class IndiceNonValide : public std::logic_error {
 public:
    explicit IndiceNonValide(const char* s) : logic_error(s) {
    }
+   explicit IndiceNonValide(std::string s) : logic_error(s) {
+   }
 };
 
 class PrixNonValide : public std::logic_error {
 public:
    explicit PrixNonValide(const char* s) : logic_error(s) {
+   }
+   explicit PrixNonValide(std::string s) : logic_error(s) {
    }
 };
 #endif /* EXCEPTIONS_H */

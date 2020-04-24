@@ -17,6 +17,8 @@
 #include <string>
 #include <iterator>
 
+const std::string MSG_ERREUR = "Erreur dans Collection::get :\n"
+       "n doit etre strictement plus petit que collection.size()";
 
 template <typename T, template <typename,typename> class Conteneur>
 void Collection<T, Conteneur>::ajouter(T element){
@@ -27,8 +29,7 @@ template <typename T, template <typename,typename> class Conteneur>
 T& Collection<T,Conteneur>::get(size_t indice){
    if(indice >= collection.size()){
       
-      throw IndiceNonValide("Erreur dans Collection::get :\n"
-       "n doit etre strictement plus petit que collection.size()");
+      throw IndiceNonValide(MSG_ERREUR);
    }
    if( indice == collection.size() - 1 ){
    	return collection.back();
