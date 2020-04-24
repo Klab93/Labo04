@@ -77,7 +77,7 @@ int main() {
 				  << c.contient(p2) << endl
 				  << noboolalpha;
 			{
-
+				//expression lambda qui permet de majorer de 10% des éléments
 				auto majore = [](Produit& p){
 					p.setPrix( p.getPrix() * 1.1 );
 				};

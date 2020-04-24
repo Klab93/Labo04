@@ -6,7 +6,7 @@
  Date        : 22.04.2020
 
  But         : Implémenter les fonctionalités de la classe Collection
- 
+
  Compilateur : MinGW-g++ 6.3.0
  -----------------------------------------------------------------------------------
 */
@@ -26,7 +26,7 @@ void Collection<T, Conteneur>::ajouter(T element){
 template <typename T, template <typename,typename> class Conteneur>
 T& Collection<T,Conteneur>::get(size_t indice){
    if(indice >= collection.size()){
-      
+
       throw IndiceNonValide("Erreur dans Collection::get :\n"
        "n doit etre strictement plus petit que collection.size()");
    }
@@ -34,6 +34,7 @@ T& Collection<T,Conteneur>::get(size_t indice){
    	return collection.back();
    }
    auto it = collection.begin();
+   //advance fonction de la librairie iterator
    std::advance(it, indice);
    
    return *it;
@@ -55,7 +56,7 @@ bool Collection<T, Conteneur>::contient(const T& element) const {
 }
 
 template <typename T, template <typename,typename> class Conteneur>
-void Collection<T, Conteneur>::vider() noexcept {
+void Collection<T, Conteneur>::vider() noexcept{
    collection.clear();
 }
 template <typename T, template <typename,typename> class Conteneur>
